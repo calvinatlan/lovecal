@@ -8,31 +8,15 @@ function State:init()
 end
 
 function State:bind(load, update, draw, unload, keypressed)
-    self.Load = load
-    self.Update = update
-    self.Draw = draw
+    self.load = load
+    self.update = update
+    self.draw = draw
     self.Unload = unload
-    self.Keypressed = keypressed
+    self.keypressed = keypressed
 end
 
 function State:setParent(stateMachine)
     self.parent = stateMachine
-end
-
-function State:load()
-    self.Load(self)
-end
-
-function State:update(dt)
-    self.Update(self, dt)
-end
-
-function State:draw()
-    self.Draw(self)
-end
-
-function State:keypressed(key)
-    self.Keypressed(self, key)
 end
 
 function State:unload()
