@@ -7,4 +7,6 @@
 local path = ... .. "."
 local lovecal = {}
 lovecal.Window = require(path .. 'window')
+lovecal.State = require(path .. 'state')
+lovecal.StateMachine = require(path .. 'statemachine')
 return lovecal
