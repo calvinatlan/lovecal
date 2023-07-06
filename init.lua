@@ -9,4 +9,5 @@ local lovecal = {}
 lovecal.Window = require(path .. 'window')
 lovecal.State = require(path .. 'state')
 lovecal.StateMachine = require(path .. 'statemachine')
+lovecal.Object = require(path .. 'object')
 return lovecal
