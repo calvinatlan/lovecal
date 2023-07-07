@@ -13,37 +13,37 @@ function StateMachine:setState(state)
 end
 
 function StateMachine:attach()
-    if self.currState ~= null then
+    if self.currState ~= nil then
         self.currState:setParent(self)
     end
 end
 
 function StateMachine:load()
-    if self.currState ~= null then
+    if self.currState ~= nil then
         self.currState:load()
     end
 end
 
 function StateMachine:update(dt)
-    if self.currState ~= null then
+    if self.currState ~= nil then
         self.currState:update(dt)
     end
 end
 
 function StateMachine:draw()
-    if self.currState ~= null then
+    if self.currState ~= nil then
         self.currState:draw()
     end
 end
 
 function StateMachine:keypressed(key)
-    if self.currState ~= null then
+    if self.currState ~= nil then
         self.currState:keypressed(key)
     end
 end
 
 function StateMachine:unload()
-    if self.currState ~= null then
+    if self.currState ~= nil then
         self.currState:unload()
     end
 end
